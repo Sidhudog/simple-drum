@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      .drum{
+          margin: 50px;
+          padding: 20px;
+          border: solid blue;
+          background-color: rgb(165, 167, 166);
+          color: rgb(255, 255, 255);
+      }
+      div{
+          background-color: rgb(197, 255, 127);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <button id="btn1" class="drum">A</button>
+      <button id="btn2" class="drum">S</button>
+      <button id="btn3" class="drum">D</button>
+      <button id="btn4" class="drum">F</button>
+      <button id="btn5" class="drum">G</button>
+      <button id="btn6" class="drum">H</button>
+      <button id="btn7" class="drum">J</button>
+      <button id="btn8" class="drum">K</button>
+    </div>
+  </body>
+  <script>
+    // addmusic
+    window.addEventListener("keydown", (e) => {
+      console.log(e);
+      switch (e.keyCode) {
+        case 65:
+          var music = new Audio("mixkit-blockbuster-trailer-bass-drum-553.wav");
+            music.play();
+          break;
+        case 83:
+          var music = new Audio("mixkit-deep-horror-drum-556.wav");
+            music.play();
+          break;
+        case 68:
+          var music = new Audio("mixkit-drum-and-percussion-545.wav");
+            music.play();
+          break;
+        case 70:
+          var music = new Audio("mixkit-toy-drums-and-bell-ding-560.wav");
+            music.play();
+          break;
+        case 71:
+          var music = new Audio("mixkit-tribal-dry-drum-558.wav");
+            music.play();
+          break;
+        case 72:
+          var music = new Audio("Single-clap-sound effect.mp3");
+            music.play();
+          break;
+        case 74:
+          var music = new Audio("mixkit-stuttering-sci-fi-robotic-voices-280.wav");
+            music.play();
+          break;
+        case 75:
+          var music = new Audio("mixkit-man-coughing-2224.wav");
+            music.play();
+          break;
+      }
+    });
+    // addcolour
+    window.addEventListener("keydown", (e) => {
+      console.log(e);
+      switch (e.keyCode) {
+        case 65:
+          document.getElementById("btn1").style.background = "red";
+          break;
+        case 83:
+          document.getElementById("btn2").style.background = "rgb(255, 111, 0)";
+            break;
+        case 68:
+          document.getElementById("btn3").style.background = "rgb(255, 255, 0)";
+            break;
+        case 70:
+          document.getElementById("btn4").style.background = "rgb(140, 255, 0)";
+            break;
+        case 71:
+          document.getElementById("btn5").style.background = "rgb(0, 255, 115)";
+            break;
+        case 72:
+          document.getElementById("btn6").style.background = "rgb(0, 115, 255)";
+            break;
+        case 74:
+          document.getElementById("btn7").style.background = "rgb(115, 0, 255)";
+            break;
+        case 75:
+          document.getElementById("btn8").style.background = "rgb(255, 4, 84)";
+            break;
+      }
+    });
+    //removecolour
+    window.addEventListener("keyup", (e) => {
+      console.log(e);
+      switch (e.keyCode) {
+        case 65:
+          document.getElementsByClassName("drum")[0].style.background =
+            "rgb(165, 167, 166)";
+              break;
+        case 83:
+          document.getElementsByClassName("drum")[1].style.background =
+            "rgb(165, 167, 166)";
+              break;
+        case 68:
+          document.getElementsByClassName("drum")[2].style.background =
+            "rgb(165, 167, 166)";
+              break;
+        case 70:
+          document.getElementsByClassName("drum")[3].style.background =
+            "rgb(165, 167, 166)";
+              break;
+        case 71:
+          document.getElementsByClassName("drum")[4].style.background =
+            "rgb(165, 167, 166)";
+              break;
+        case 72:
+          document.getElementsByClassName("drum")[5].style.background =
+            "rgb(165, 167, 166)";
+              break;
+        case 74:
+          document.getElementsByClassName("drum")[6].style.background =
+            "rgb(165, 167, 166)";
+              break;
+        case 75:
+          document.getElementsByClassName("drum")[7].style.background =
+            "rgb(165, 167, 166)";
+              break;
+      }
+    });
+  </script>
+</html>
